@@ -7,11 +7,24 @@
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
+	
+	.mobile({
+		flex-wrap: wrap;
+		justify-content: center;
+	});
 }
 
 .pic__block {
 	max-width: 265px;
 	text-align: left;
+	
+	.mobile({
+		text-align: center;
+	});
+}
+
+.pic__block:nth-child(odd) {
+	margin-right: 20px;
 }
 
 .pic__img {
@@ -38,4 +51,9 @@
 .pic__btn {
 	.button();
 	margin-bottom: 36px;
+}
+
+.pic__btn:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+	cursor: pointer;
 }
